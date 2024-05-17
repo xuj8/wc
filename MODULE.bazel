@@ -4,3 +4,8 @@
 #
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
+
+module(
+    name = "wc_project",
+    version = "1.0",
+)
