@@ -70,8 +70,6 @@
 #define CLI11_VERSION "2.4.2"
 
 
-
-
 // The following version macro is very similar to the one in pybind11
 #if !(defined(_MSC_VER) && __cplusplus == 199711L) && !defined(__INTEL_COMPILER)
 #if __cplusplus >= 201402L

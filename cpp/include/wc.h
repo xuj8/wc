@@ -2,11 +2,26 @@
 
 #include <fstream>
 #include <iostream>
+#include <vector>
+#include <optional>
+#include "buffer_reader.h"
 
-size_t count_words(std::istream& stream);
 
-size_t count_lines(std::istream& stream);
+struct WcConfig {
+    std::string filename;
+    bool count_bytes, count_lines, count_words, count_chars;
 
-size_t count_bytes(std::istream& stream);
+    WcConfig(int argc, char* argv[]);
 
-size_t count_chars(std::istream& stream);
+    void parse_args(int argc, char* argv[]);
+};
+
+std::vector<size_t> handle_queries(std::istream& stream, const WcConfig& config);
+
+// size_t count_words(std::istream& stream);
+
+// size_t count_lines(std::istream& stream);
+
+// size_t count_bytes(std::istream& stream);
+
+// size_t count_chars(std::istream& stream);
