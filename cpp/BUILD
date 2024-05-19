@@ -17,3 +17,14 @@ cc_binary(
     #     "//build:release": ["-O3"],
     # }),
 )
+
+cc_test(
+    name = "wc_test",
+    srcs = ["tests/wc_test.cpp"],
+    deps = [
+        ":wc_lib",
+        "@com_google_googletest//:gtest",
+        "@com_google_googletest//:gtest_main",
+    ],
+    copts = ["-std=c++20"],
+)

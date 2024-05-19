@@ -8,9 +8,10 @@
 
 
 struct WcConfig {
-    std::string filename;
-    bool count_bytes, count_lines, count_words, count_chars;
+    std::string filename="";
+    bool count_bytes=false, count_lines=false, count_words=false, count_chars=false;
 
+    WcConfig();
     WcConfig(int argc, char* argv[]);
 
     void parse_args(int argc, char* argv[]);

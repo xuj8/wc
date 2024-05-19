@@ -2,6 +2,8 @@
 #include <CLI11.hpp>
 #include <iostream>
 
+WcConfig::WcConfig() {};
+
 WcConfig::WcConfig(int argc, char* argv[]) {
     parse_args(argc, argv);
 }
